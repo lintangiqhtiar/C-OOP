@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SetterdanGetter
+{
+    class User
+    {
+        public class user
+        {
+            string username;
+            string password;
+            public string Username
+            {
+                get { return username; }
+                set { username = value; }
+            }
+
+            public string Password
+            {
+                get { return password; }
+                set { password = value; }
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            user dian = new user();
+            dian.Username = "dian";
+            dian.Password = "kopic#";
+
+            Console.WriteLine("Username = " + dian.Username);
+            Console.WriteLine("Password = " + dian.Password);
+
+            Console.ReadKey();
+        }
+    }
+}
