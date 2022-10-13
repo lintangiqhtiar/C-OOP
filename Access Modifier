@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Acces_Modifier
+{
+    class Person
+    {
+        public string name = "forger";
+    }
+
+    class Person1
+    {
+        private string name; // field
+
+        public string Name   // property
+        {
+            get { return name; }   // get method
+            set { name = value; }  // set method
+        }
+    }
+
+    class Person2
+    {
+        protected string name;
+        public Person2 (string name)
+        {
+            this.name = name;
+        }
+        public void showInfo()
+        {
+            Console.WriteLine(name);
+        }
+    }
+   
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person myName = new Person();
+            Console.WriteLine(myName.name);
+
+            Person1 Namaku = new Person1();
+            Namaku.Name = "anya";
+            Console.WriteLine(Namaku.Name);
+            
+            Person2 hs = new Person2("lana");
+            hs.showInfo();
+        }
+    }
+}
