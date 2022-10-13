@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ThisdanSuper
+{
+    class Program
+    {
+        class User
+        {
+            private string username;
+            private string password;
+
+            public User (String username, String password)
+            {
+                this.username = username;
+                this.password = password;
+            }
+
+            public void showInfoThis()
+            {
+                Console.WriteLine("Username : " + username + "\nPassword : " + password);
+            }
+        }
+        public class Person
+        {
+            public string name = "petanikode";
+            public int age = 22;
+        }
+        public class Employee : Person
+        {
+            string name = "Dian";
+            float Salary = 4000f;
+            int age = 23;
+            public void showInfoBase()
+            {
+                Console.WriteLine("Name: " + base.name);
+                Console.WriteLine("Age: " + base.age);
+                Console.WriteLine("Salary: $" + Salary);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Implementasi This");
+            //iplementasi this
+            User user1 = new User("petanisayur", "akubangga");
+
+            user1.showInfoThis();
+            Console.WriteLine("\nImplementasi Base");
+            //imlementasi super
+            Employee hasil = new Employee();
+            hasil.showInfoBase();
+        }
+    }
+}
